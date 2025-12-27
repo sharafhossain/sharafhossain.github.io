@@ -1,7 +1,119 @@
 ---
-title: "Portfolio item number 2"
-excerpt: "Short description of portfolio item number 2 <br/><img src='/images/500x300.png'>"
+title: "Warehouse Robotic Manipulation with MPC & Vision"
+excerpt: "🤖 Real-time robotic manipulation on a UR7e arm using Model Predictive Control and RGB-D perception. Focus on constraint-aware control, perception-to-action pipelines, and deployment on real hardware<br/><img src='/images/final_robot_mpc (1).mp4>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+<h2>🚀 Overview</h2>
+<p>
+This project implements a <strong>real-time robotic manipulation system</strong> for warehouse-style pick-and-place tasks using a UR7e robotic arm.
+The system combines <strong>vision-based perception</strong>, <strong>inverse kinematics</strong>, and a <strong>joint-space Model Predictive Controller (MPC)</strong> to execute safe, smooth, and adaptive manipulation in cluttered environments.
+</p>
+
+<p>
+The work emphasizes <strong>deployable robotics</strong>: tight control loops, explicit constraints, and robustness to perception updates — aligning closely with industrial and research robotics problems tackled at NVIDIA.
+</p>
+
+<hr/>
+
+<h2>🧠 Problem</h2>
+<ul>
+  <li>Robotic arms must operate safely near obstacles and joint limits</li>
+  <li>Perception updates dynamically as objects are detected and classified</li>
+  <li>Classical motion planning struggles with online updates and constraints</li>
+  <li>Real systems require <strong>predictive, constraint-aware control</strong></li>
+</ul>
+
+<p>
+The challenge is to close the loop between perception and control <em>without replanning everything from scratch</em>.
+</p>
+
+<hr/>
+
+<h2>🛠️ System Architecture</h2>
+<ul>
+  <li>RGB-D perception for object detection and localization</li>
+  <li>Inverse kinematics to generate feasible joint targets</li>
+  <li>Joint-space MPC for smooth, constraint-aware motion</li>
+  <li>Execution on real UR7e hardware</li>
+</ul>
+
+<p>
+MPC handles safety-critical constraints while perception and IK specify task intent — a modular architecture common in modern robotic stacks.
+</p>
+
+<hr/>
+
+<h2>📊 Control & Optimization</h2>
+<ul>
+  <li>Joint-space MPC formulation with finite horizon optimization</li>
+  <li>Explicit constraints:
+    <ul>
+      <li>Joint position limits</li>
+      <li>Velocity bounds</li>
+      <li>Collision avoidance margins</li>
+    </ul>
+  </li>
+  <li>Receding-horizon replanning at each control step</li>
+</ul>
+
+<p>
+This approach enables smooth motion even when targets or constraints change online — a key requirement for intelligent manipulation systems.
+</p>
+
+<hr/>
+
+<h2>👨‍💻 My Contributions</h2>
+<ul>
+  <li>Designed and implemented the <strong>joint-space MPC controller</strong></li>
+  <li>Integrated perception → IK → MPC into a single control pipeline</li>
+  <li>Handled real-world constraints and actuator limits</li>
+  <li>Validated performance on physical hardware, not just simulation</li>
+</ul>
+
+<hr/>
+
+<h2>🧰 Tools & Stack</h2>
+<ul>
+  <li>Python, C++</li>
+  <li>ROS 2, MoveIt</li>
+  <li>Model Predictive Control & optimization</li>
+  <li>RGB-D perception</li>
+  <li>Real-time robotic systems</li>
+</ul>
+
+<hr/>
+
+<h2>📈 Results</h2>
+<ul>
+  <li>✅ Collision-free pick-and-place in cluttered environments</li>
+  <li>✅ Smooth, stable trajectories under constraints</li>
+  <li>✅ Reliable perception-driven manipulation on real hardware</li>
+</ul>
+
+<hr/>
+
+<h2>🎯 Why This Matters for Robotics & ML Roles</h2>
+<p>
+This project demonstrates skills directly relevant to <strong>NVIDIA Robotics & AI</strong> teams:
+</p>
+<ul>
+  <li>Real-time control and optimization</li>
+  <li>Embodied AI: perception feeding control</li>
+  <li>Constraint-aware decision making</li>
+  <li>Bridging simulation concepts to physical robots</li>
+</ul>
+
+<p>
+The architecture mirrors modern approaches used in simulation-accelerated robotics, reinforcement learning pipelines, and GPU-backed autonomy stacks.
+</p>
+
+<hr/>
+
+<h2>🔮 Extensions & ML Integration</h2>
+<ul>
+  <li>Learning cost functions or constraints from data</li>
+  <li>Policy learning on top of MPC (learning-based MPC)</li>
+  <li>Scaling to multi-arm or mobile manipulation</li>
+  <li>Integration with large-scale simulation (e.g. Isaac-style workflows)</li>
+</ul>
