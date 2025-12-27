@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&display=swap');
 
-/* Orbitron for site title only */
+/* Orbitron for the site title in the nav */
+#site-nav .masthead__menu-item--lg a,
 .site-title,
 .masthead__title {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+/* Add breathing room below the fixed masthead */
+body {
+  padding-top: 4.5rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 4rem;
+  }
 }
