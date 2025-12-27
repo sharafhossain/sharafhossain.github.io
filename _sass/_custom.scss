@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&display=swap');
+
+/* Orbitron for site title only */
+.site-title,
+.masthead__title {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
