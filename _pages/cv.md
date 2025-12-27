@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "📄 Resume"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,7 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-## 📄 Resume (PDF)
 
 **Download:**  
 👉 [Sharaf Hossain – Resume (PDF)](/files/Sharaf_Hossain_Resume.pdf)
