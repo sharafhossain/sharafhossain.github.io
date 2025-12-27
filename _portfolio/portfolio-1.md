@@ -1,6 +1,6 @@
 ---
 title: "UC Berkeley Autonomous AI Racing"
-excerpt: "Developing algorthims for the control system of autonomous race cars<br/><img src='/images/airacingtech.jpeg'>"
+excerpt: "Developing algorthims for the control system of autonomous race cars<br/><img src='/images/Adobe Express - file.jpg'>"
 collection: portfolio
 ---
 
