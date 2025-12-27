@@ -66,8 +66,3 @@ For detailed technical breakdowns, see the **Projects** section:
 - Autonomous Drone Racing & Robotics Control Projects
 
 ---
-
-## 📬 Contact
-- **Email:** sharafhossain1@gmail.com  
-- **GitHub:** https://github.com/sharafhossain  
-- **LinkedIn:** (add link)
