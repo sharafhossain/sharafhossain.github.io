@@ -14,8 +14,8 @@ main:
   - title: "Resume"
     url: /cv/    
 
-  - title: "Contact"
-    url: /teaching/    
+  #- title: "Contact"
+  #  url: /teaching/    
     
   #- title: "Side Quests"
   #  url: /side_quests/
