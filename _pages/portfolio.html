@@ -1,14 +1,46 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Projects"
 permalink: /portfolio/
 author_profile: true
 ---
 
 {% include base_path %}
 
+<p class="portfolio-intro">
+  Things I've built or am building. The deployed stuff runs on real hardware.
+</p>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<!-- Featured Project -->
+<div class="portfolio-section">
+  <h2 class="portfolio-section__title">Featured</h2>
+  {% for post in site.portfolio %}
+    {% if post.featured %}
+      {% include archive-single-portfolio.html %}
+    {% endif %}
+  {% endfor %}
+</div>
 
+<!-- Deployed Systems -->
+<div class="portfolio-section">
+  <h2 class="portfolio-section__title">Deployed Systems</h2>
+  <div class="portfolio-grid">
+    {% assign deployed = site.portfolio | where: "category_label", "deployed" | sort: "priority" %}
+    {% for post in deployed %}
+      {% unless post.featured %}
+        {% include archive-single-portfolio.html %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- In Progress -->
+<div class="portfolio-section">
+  <h2 class="portfolio-section__title">In Progress</h2>
+  <div class="portfolio-grid">
+    {% assign wip = site.portfolio | where: "category_label", "wip" | sort: "priority" %}
+    {% for post in wip %}
+      {% include archive-single-portfolio.html %}
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,63 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="portfolio-card {% if post.featured %}portfolio-card--featured{% endif %}">
+  <article itemscope itemtype="http://schema.org/CreativeWork">
+
+    {% if post.thumbnail %}
+      <div class="portfolio-card__thumbnail">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+          {% if post.thumbnail_type == 'video' %}
+            <video src="{{ post.thumbnail }}" autoplay muted loop playsinline style="width:100%; display:block;"></video>
+          {% else %}
+            <img src="{{ post.thumbnail }}" alt="{{ title }}" loading="lazy" />
+          {% endif %}
+        </a>
+      </div>
+    {% endif %}
+
+    <div class="portfolio-card__body">
+      <h3 class="portfolio-card__title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      </h3>
+
+      {% if post.status %}
+        {% if post.status == 'deployed' or post.status == 'complete' %}
+          <span class="portfolio-card__status portfolio-card__status--done">{{ post.status }}</span>
+        {% elsif post.status == 'upcoming' %}
+          <span class="portfolio-card__status portfolio-card__status--upcoming">{{ post.status }}</span>
+        {% else %}
+          <span class="portfolio-card__status portfolio-card__status--wip">{{ post.status }}</span>
+        {% endif %}
+      {% endif %}
+
+      {% if post.tech %}
+        <div class="portfolio-card__tech">
+          {% for tag in post.tech %}
+            <span class="tech-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if post.summary %}
+        <p class="portfolio-card__summary">{{ post.summary }}</p>
+      {% endif %}
+
+      {% if post.highlights %}
+        <ul class="portfolio-card__highlights">
+          {% for h in post.highlights %}
+            <li>{{ h }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__link" rel="permalink">View details &rarr;</a>
+    </div>
+
+  </article>
+</div>
