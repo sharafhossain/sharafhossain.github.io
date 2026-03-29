@@ -26,7 +26,7 @@ tech:
 
 Racing against a single clock is one problem. Racing against other cars that are also trying to win is a different, harder problem. Your optimal trajectory now depends on what the other cars do -- and they're thinking the same thing about you.
 
-I'm extending my single-car MPC work to handle this. The approach is a hybrid: RL picks the strategy (overtake left, defend inside, wait and draft), and MPC executes it while keeping the car within its physical limits. MPC alone can't reason about strategy; RL alone can't guarantee you won't spin out at 60 mph. You need both.
+I'm extending my single-car MPC work to handle this. The approach is a hybrid: RL picks the strategy (overtake left, defend inside, wait and draft), and MPC executes it while keeping the car within its physical limits. MPC alone can't reason about strategy; RL alone can't guarantee you won't spin out at 150 mph. You need both.
 
 **This is in progress.** The single-car MPC is done and deployed (see the racing project). Right now I'm building the multi-agent simulation environment and integrating the two layers.
 
@@ -53,7 +53,7 @@ Opponent observation → Strategic policy (MARL)
 ## Why not just use one or the other?
 
 - MPC by itself can't encode "wait two laps then overtake on the outside" -- that's strategic, not optimization-shaped
-- RL by itself can't guarantee constraint satisfaction at 60+ mph with 10ms control loops
+- RL by itself can't guarantee constraint satisfaction at 150+ mph with 10ms control loops
 - The hybrid gets you both: strategic intelligence with hard safety guarantees
 
 ---

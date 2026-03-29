@@ -48,7 +48,7 @@ BEng, Chemical Engineering
 
 **UC Berkeley ROAR -- Autonomous AI Racing**
 *Robotics & Autonomy Engineer*
-- Nonlinear MPC (ACADOS/CasADi) for autonomous racing at **60+ mph, 100 Hz**
+- Nonlinear MPC (ACADOS/CasADi) for autonomous racing at **150+ mph, 100 Hz**
 - Tire-model-aware control near the handling limits with explicit constraint satisfaction
 - Full autonomy stack integration in ROS 2 and C++ across perception, planning, and control
 - Team won **1st place**, IAC passing competition at CES 2025

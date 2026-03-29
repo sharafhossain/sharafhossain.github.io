@@ -10,7 +10,7 @@ status: deployed
 summary: "MPC controllers for the AV-24 at UC Berkeley ROAR. Tire-model-aware nonlinear optimization at 100 Hz, deployed on a real race car. CES 2025 winner."
 highlights:
   - "100 Hz MPC solve time (< 10ms per cycle)"
-  - "60+ mph, < 15cm lateral tracking error"
+  - "150+ mph, < 15cm lateral tracking error"
   - "1st place at IAC CES 2025 passing competition"
 tech:
   - C++
@@ -31,7 +31,7 @@ tech:
 
 ## What this is
 
-I work on the control system for UC Berkeley ROAR's autonomous race car -- a Dallara AV-24 that races at 60+ mph with no human driver. At those speeds, with tires near saturation and 10ms between control decisions, you can't use simple PID or trajectory replay. The controller has to solve a constrained nonlinear optimization problem in real time, every cycle.
+I work on the control system for UC Berkeley ROAR's autonomous race car -- a Dallara AV-24 that races at 150+ mph with no human driver. At those speeds, with tires near saturation and 10ms between control decisions, you can't use simple PID or trajectory replay. The controller has to solve a constrained nonlinear optimization problem in real time, every cycle.
 
 ---
 
@@ -47,7 +47,7 @@ The core is a nonlinear MPC built on ACADOS and CasADi. It uses a Pacejka tire m
 
 ## Numbers
 
-- **60+ mph** autonomous driving, **< 15cm** lateral tracking error
+- **150+ mph** autonomous driving, **< 15cm** lateral tracking error
 - MPC solves in **< 10ms** consistently (100 Hz)
 - Constraint satisfaction holds through aggressive cornering
 - 1st place at the Indy Autonomous Challenge passing competition, CES 2025

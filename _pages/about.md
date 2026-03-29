@@ -18,7 +18,7 @@ I work on robotics systems where the software has to actually run on hardware --
 
 ## What I Work With
 
-**Controls & Optimization** -- Nonlinear MPC (ACADOS, CasADi), vehicle dynamics with Pacejka tire models, joint-space MPC for manipulation. I've tuned controllers that run at 100 Hz and track to within 15cm at 60+ mph.
+**Controls & Optimization** -- Nonlinear MPC (ACADOS, CasADi), vehicle dynamics with Pacejka tire models, joint-space MPC for manipulation. I've tuned controllers that run at 100 Hz and track to within 15cm at 150+ mph.
 
 **Robotics Systems** -- ROS 2 autonomy stacks (perception, planning, control), Isaac Sim for sim-to-real, hardware integration on UR7e arms, PX4 drones, and full-scale Dallara AV-24 race cars.
 
