@@ -1,59 +1,132 @@
 ---
 layout: archive
 permalink: /
-title: "Robotics & Autonomy Engineer"
+title: ""
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I work on robotics systems where the software has to actually run on hardware -- MPC controllers at 100 Hz on race cars, manipulation pipelines on real robot arms, embedded firmware on quadrotors. Most of what I do lives in C++, Python, and ROS 2.
+<div class="apple-hero">
+  <img src="/images/av24-ces25-finish.jpg" alt="AV-24 autonomous race cars at CES 2025" />
+</div>
 
-**UC Berkeley MEng (Robotics & Control).** Before that I was a data engineer at HSBC, an ML engineer doing satellite-based infrastructure monitoring, and co-founded a UCL-incubated startup that landed a UK Ministry of Defence contract.
+<div class="apple-headline">
+  <h1>I build autonomous systems<br/>that run on real hardware.</h1>
+  <p class="apple-sub">MPC at 150+ mph. Manipulation on real robot arms. Embedded firmware on quadrotors.<br/>UC Berkeley MEng. Previously HSBC, startup co-founder (UK MOD contract).</p>
+</div>
 
-**Looking for full-time robotics / autonomy / ML engineering roles in the US.**
+<div class="apple-stats">
+  <div class="apple-stat">
+    <span class="apple-stat__number">150+</span>
+    <span class="apple-stat__label">mph autonomous</span>
+  </div>
+  <div class="apple-stat">
+    <span class="apple-stat__number">100 Hz</span>
+    <span class="apple-stat__label">control rate</span>
+  </div>
+  <div class="apple-stat">
+    <span class="apple-stat__number">1st</span>
+    <span class="apple-stat__label">CES 2025</span>
+  </div>
+  <div class="apple-stat">
+    <span class="apple-stat__number">10K+</span>
+    <span class="apple-stat__label">datasets at HSBC</span>
+  </div>
+</div>
 
----
+<div class="apple-section">
+  <h2>What I work with</h2>
+  <div class="apple-tags">
+    <span class="apple-tag">C++</span>
+    <span class="apple-tag">Python</span>
+    <span class="apple-tag">ROS 2</span>
+    <span class="apple-tag">PyTorch</span>
+    <span class="apple-tag">Nonlinear MPC</span>
+    <span class="apple-tag">ACADOS</span>
+    <span class="apple-tag">CasADi</span>
+    <span class="apple-tag">Isaac Sim</span>
+    <span class="apple-tag">MoveIt</span>
+    <span class="apple-tag">PX4</span>
+    <span class="apple-tag">EKF/UKF</span>
+    <span class="apple-tag">YOLO</span>
+    <span class="apple-tag">OpenCV</span>
+    <span class="apple-tag">RealSense</span>
+    <span class="apple-tag">LiDAR</span>
+    <span class="apple-tag">Sensor Fusion</span>
+    <span class="apple-tag">SQL</span>
+    <span class="apple-tag">Git</span>
+    <span class="apple-tag">Embedded</span>
+  </div>
+</div>
 
-## What I Work With
+<div class="apple-section">
+  <h2>Experience</h2>
 
-**Controls & Optimization** -- Nonlinear MPC (ACADOS, CasADi), vehicle dynamics with Pacejka tire models, joint-space MPC for manipulation. I've tuned controllers that run at 100 Hz and track to within 15cm at 150+ mph.
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>UC Berkeley ROAR</strong>
+      <span>Robotics & Autonomy</span>
+    </div>
+    <div class="apple-exp__right">
+      MPC controllers for AI Racing Tech's AV-24. 100 Hz nonlinear optimization, tire-model-aware control, full ROS 2 stack. Won CES 2025.
+    </div>
+  </div>
 
-**Robotics Systems** -- ROS 2 autonomy stacks (perception, planning, control), Isaac Sim for sim-to-real, hardware integration on UR7e arms, PX4 drones, and full-scale Dallara AV-24 race cars.
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>Warehouse Manipulation</strong>
+      <span>Robotics Engineer</span>
+    </div>
+    <div class="apple-exp__right">
+      RGB-D perception through IK to joint-space MPC on a UR7e. Picks and places on real hardware in cluttered environments.
+    </div>
+  </div>
 
-**Perception & Estimation** -- RGB-D pipelines with RealSense, YOLO, OpenCV. State estimation with EKF/UKF and multi-sensor fusion. I care a lot about what happens when sensors drop out or disagree.
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>Letchworth Heritage</strong>
+      <span>ML Engineer</span>
+    </div>
+    <div class="apple-exp__right">
+      Satellite imagery + ML for infrastructure monitoring. Forecasting that found 14% energy savings across a GBP 30M+ portfolio.
+    </div>
+  </div>
 
-**ML & Simulation** -- PyTorch for ML-based swarm optimization, dynamics simulation for drones and satellites, reinforcement learning for control problems.
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>HSBC</strong>
+      <span>Data Engineer</span>
+    </div>
+    <div class="apple-exp__right">
+      ETL pipelines for 10,000+ unstructured datasets. Anomaly detection at >99% accuracy. NLP extraction for compliance.
+    </div>
+  </div>
 
----
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>Ford Madox Ltd</strong>
+      <span>Co-founder</span>
+    </div>
+    <div class="apple-exp__right">
+      UCL-incubated startup. GBP 30K funding, GBP 10K+ revenue. Fire-resistant prototypes for the UK Ministry of Defence.
+    </div>
+  </div>
+</div>
 
-## Selected Experience
+<div class="apple-cta">
+  <h2>Looking for robotics & autonomy roles in the US.</h2>
+  <p>Controls. Simulation. ML. Drones. Manipulation. Available now.</p>
+  <div class="apple-cta__buttons">
+    <a href="mailto:sharaf_hossain@berkeley.edu" class="apple-btn apple-btn--primary">Get in touch</a>
+    <a href="/files/Sharaf_Hossain_Resume.pdf" class="apple-btn apple-btn--ghost">Resume</a>
+    <a href="/portfolio/" class="apple-btn apple-btn--ghost">Projects</a>
+  </div>
+</div>
 
-**Autonomous Racing (UC Berkeley ROAR)** -- I write the MPC controllers for AI Racing Tech's AV-24. Tire-model-aware nonlinear MPC, 100 Hz solve times, integrated into the full autonomy stack. We won the IAC passing competition at CES 2025.
-
-**Warehouse Manipulation** -- Built the whole pipeline from RGB-D detection through IK to joint-space MPC on a UR7e arm. It picks and places in cluttered environments, on real hardware.
-
-**ML Engineer (Letchworth Heritage Foundation)** -- Satellite imagery + ML for infrastructure monitoring. Built forecasting models that identified 14% energy savings across a GBP 30M+ portfolio.
-
-**Data Engineer (HSBC)** -- ETL pipelines handling 10,000+ unstructured datasets, anomaly detection at >99% compliance accuracy, NLP extraction for documentation.
-
-**Drone Swarm Sim** -- Multi-drone swarm dynamics with ML optimization for coordination. Also working on LiDAR simulation and satellite constellation modeling.
-
----
-
-## What I'm Looking For
-
-- Robotics software (controls, planning, perception)
-- Simulation (Isaac Sim, sim-to-real pipelines)
-- ML / autonomy engineering
-- Drone and aerial systems
-- Warehouse / manipulation robotics
-
-US-based. Available now.
-
----
-
-Also interested in: multi-agent coordination, game-theoretic control, and hybrid optimization + learning approaches.
-
-[Projects](/portfolio/) | [Resume (PDF)](/files/Sharaf_Hossain_Resume.pdf) | [Email me](mailto:sharaf_hossain@berkeley.edu) | [LinkedIn](https://www.linkedin.com/in/sharafhossain) | [GitHub](https://github.com/sharafhossain)
+<div class="apple-footer-links">
+  <a href="https://www.linkedin.com/in/sharafhossain">LinkedIn</a>
+  <a href="https://github.com/sharafhossain">GitHub</a>
+  <a href="mailto:sharaf_hossain@berkeley.edu">Email</a>
+</div>
