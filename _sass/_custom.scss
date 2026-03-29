@@ -506,6 +506,123 @@ html[data-theme="dark"] .portfolio-card__link:hover {
 }
 
 /* ══════════════════════════════════════
+   SHARED COMPONENTS (resume + homepage)
+   ══════════════════════════════════════ */
+
+.resume-download {
+  margin-bottom: 1.5em;
+}
+
+/* Experience cards */
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.experience-card {
+  padding: 1.2em 1.3em;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  border-radius: 10px;
+  transition: border-color 0.2s ease;
+}
+
+.experience-card:hover {
+  border-color: rgba(128, 128, 128, 0.25);
+}
+
+.experience-card__header {
+  margin-bottom: 0.5em;
+}
+
+.experience-card__header strong {
+  display: block;
+  font-size: 1em;
+}
+
+.experience-card__role {
+  font-size: 0.8em;
+  opacity: 0.45;
+  font-weight: 500;
+}
+
+.experience-card p {
+  font-size: 0.88em;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.experience-card__bullets {
+  font-size: 0.88em;
+  line-height: 1.6;
+  margin: 0.4em 0 0 1.2em;
+  padding: 0;
+  opacity: 0.75;
+}
+
+.experience-card__bullets li {
+  margin-bottom: 0.3em;
+}
+
+/* Skill groups */
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.skill-group {
+  padding: 1em;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  border-radius: 10px;
+}
+
+.skill-group__title {
+  font-size: 0.72em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.4;
+  margin: 0 0 0.6em 0;
+}
+
+.skill-group__tags {
+  line-height: 1.9;
+}
+
+.skill-group__tags .tech-tag {
+  font-size: 0.78em;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .experience-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-groups {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+html[data-theme="dark"] {
+  .experience-card {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .experience-card:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .skill-group {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* ══════════════════════════════════════
    APPLE-STYLE HOMEPAGE
    ══════════════════════════════════════ */
 
@@ -514,19 +631,72 @@ html[data-theme="dark"] .portfolio-card__link:hover {
   display: none;
 }
 
-/* ── Hero ── */
-.apple-hero {
-  border-radius: 16px;
-  overflow: hidden;
+/* ── Hero grid ── */
+.apple-hero-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 0.6em;
   margin-bottom: 3em;
 }
 
-.apple-hero img {
+.apple-hero-grid__main {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.apple-hero-grid__main img {
   width: 100%;
-  height: 340px;
+  height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 0 !important;
+}
+
+.apple-hero-grid__side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.apple-hero-grid__item {
+  flex: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(128, 128, 128, 0.05);
+}
+
+.apple-hero-grid__item video,
+.apple-hero-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .apple-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apple-hero-grid__main {
+    max-height: 200px;
+  }
+
+  .apple-hero-grid__main img {
+    max-height: 200px;
+  }
+
+  .apple-hero-grid__side {
+    flex-direction: row;
+  }
+
+  .apple-hero-grid__item {
+    max-height: 120px;
+  }
+
+  .apple-hero-grid__item video {
+    max-height: 120px;
+  }
 }
 
 /* ── Headline ── */

@@ -8,13 +8,23 @@ redirect_from:
   - /about.html
 ---
 
-<div class="apple-hero">
-  <img src="/images/av24-ces25-finish.jpg" alt="AV-24 autonomous race cars at CES 2025" />
+<div class="apple-hero-grid">
+  <div class="apple-hero-grid__main">
+    <img src="/images/av24-ces25-finish.jpg" alt="AV-24 race cars at CES 2025" />
+  </div>
+  <div class="apple-hero-grid__side">
+    <div class="apple-hero-grid__item">
+      <video src="/images/final_robot_mpc.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="apple-hero-grid__item">
+      <video src="/images/drone-swarm-sim.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </div>
 </div>
 
 <div class="apple-headline">
   <h1>I build autonomous systems<br/>that run on real hardware.</h1>
-  <p class="apple-sub">MPC at 150+ mph. Manipulation on real robot arms. Embedded firmware on quadrotors.<br/>UC Berkeley MEng. Previously HSBC, startup co-founder (UK MOD contract).</p>
+  <p class="apple-sub">Racing at 150+ mph. Manipulation on real robot arms. Drone swarm simulation.<br/>UC Berkeley MEng. Previously HSBC, startup co-founder (UK MOD contract).</p>
 </div>
 
 <div class="apple-stats">

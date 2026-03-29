@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 <div class="resume-download">
-  <a href="/files/Sharaf_Hossain_Resume.pdf" class="cta-btn cta-btn--primary">Download Resume (PDF)</a>
+  <a href="/files/Sharaf_Hossain_Resume.pdf" class="apple-btn apple-btn--primary">Download Resume (PDF)</a>
 </div>
 
 ---
