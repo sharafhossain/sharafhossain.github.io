@@ -23,25 +23,70 @@ redirect_from:
 </div>
 
 <div class="apple-headline">
-  <p class="apple-sub">Robotics & controls engineer. UC Berkeley MEng.<br/>Nonlinear optimization, perception systems, embedded control.<br/>Currently with AI Racing Tech on the Indy Autonomous Challenge.</p>
+  <p class="apple-sub">Robotics & controls engineer. UC Berkeley MEng.<br/>Real-time control, perception, embedded systems. C++ and Python.<br/>Currently researching VLA models for humanoid control.</p>
 </div>
+
 
 <div class="apple-stats">
   <div class="apple-stat">
-    <span class="apple-stat__number">150+</span>
-    <span class="apple-stat__label">mph autonomous</span>
+    <span class="apple-stat__number">Controls</span>
+    <span class="apple-stat__label">MPC, optimization, dynamics</span>
   </div>
   <div class="apple-stat">
-    <span class="apple-stat__number">100 Hz</span>
-    <span class="apple-stat__label">control rate</span>
+    <span class="apple-stat__number">Robotics</span>
+    <span class="apple-stat__label">ROS 2, hardware, sim-to-real</span>
   </div>
   <div class="apple-stat">
-    <span class="apple-stat__number">&lt;15cm</span>
-    <span class="apple-stat__label">tracking error</span>
+    <span class="apple-stat__number">Perception</span>
+    <span class="apple-stat__label">vision, LiDAR, state estimation</span>
   </div>
   <div class="apple-stat">
-    <span class="apple-stat__number">5+</span>
-    <span class="apple-stat__label">hardware platforms</span>
+    <span class="apple-stat__number">ML</span>
+    <span class="apple-stat__label">PyTorch, RL, VLA research</span>
+  </div>
+</div>
+
+<div class="apple-section">
+  <h2>What I do</h2>
+
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>AI Racing Tech</strong>
+      <span>Robotics Software Engineer</span>
+    </div>
+    <div class="apple-exp__right">
+      MPC controller for the AV-24 autonomous race car (Indy Autonomous Challenge). Nonlinear optimizer in C++ with ACADOS, runs in the ROS 2 stack. Car does 150+ mph with no driver, controller solves every 10ms.
+    </div>
+  </div>
+
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>Letchworth Heritage</strong>
+      <span>ML Engineer</span>
+    </div>
+    <div class="apple-exp__right">
+      ML models for satellite-based infrastructure monitoring. Forecasting that found 14% energy savings across a GBP 30M+ portfolio.
+    </div>
+  </div>
+
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>HSBC</strong>
+      <span>Data Engineer</span>
+    </div>
+    <div class="apple-exp__right">
+      Automated pipelines for 10,000+ unstructured datasets. Anomaly detection at >99% accuracy. NLP extraction for compliance docs.
+    </div>
+  </div>
+
+  <div class="apple-exp">
+    <div class="apple-exp__left">
+      <strong>Ford Madox Ltd</strong>
+      <span>Co-founder</span>
+    </div>
+    <div class="apple-exp__right">
+      Started a manufacturing company out of UCL's incubator. Raised GBP 30K, made GBP 10K+ revenue, delivered prototypes to the UK Ministry of Defence.
+    </div>
   </div>
 </div>
 
@@ -67,50 +112,6 @@ redirect_from:
     <span class="apple-tag">SQL</span>
     <span class="apple-tag">Git</span>
     <span class="apple-tag">Embedded</span>
-  </div>
-</div>
-
-<div class="apple-section">
-  <h2>Experience</h2>
-
-  <div class="apple-exp">
-    <div class="apple-exp__left">
-      <strong>UC Berkeley ROAR</strong>
-      <span>Robotics & Autonomy</span>
-    </div>
-    <div class="apple-exp__right">
-      MPC controllers for AI Racing Tech's AV-24. Nonlinear optimization at 100 Hz, tire-model-aware control, full ROS 2 autonomy stack.
-    </div>
-  </div>
-
-  <div class="apple-exp">
-    <div class="apple-exp__left">
-      <strong>Letchworth Heritage</strong>
-      <span>ML Engineer</span>
-    </div>
-    <div class="apple-exp__right">
-      Satellite imagery + ML for infrastructure monitoring. Forecasting models that found 14% energy savings across a GBP 30M+ portfolio.
-    </div>
-  </div>
-
-  <div class="apple-exp">
-    <div class="apple-exp__left">
-      <strong>HSBC</strong>
-      <span>Data Engineer</span>
-    </div>
-    <div class="apple-exp__right">
-      ETL pipelines for 10,000+ unstructured datasets. Anomaly detection at >99% accuracy. NLP extraction for compliance docs.
-    </div>
-  </div>
-
-  <div class="apple-exp">
-    <div class="apple-exp__left">
-      <strong>Ford Madox Ltd</strong>
-      <span>Co-founder</span>
-    </div>
-    <div class="apple-exp__right">
-      UCL-incubated startup. GBP 30K funding, GBP 10K+ revenue. Delivered prototypes for the UK Ministry of Defence.
-    </div>
   </div>
 </div>
 

@@ -926,16 +926,35 @@ html[data-theme="dark"] {
 
   .apple-exp {
     grid-template-columns: 1fr;
-    gap: 0.3em;
-    padding: 1em 0;
+    gap: 0.2em;
+    padding: 1.2em 0;
+  }
+
+  .apple-exp__left {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+  }
+
+  .apple-exp__left strong {
+    font-size: 0.9em;
+  }
+
+  .apple-exp__left span {
+    font-size: 0.75em;
+  }
+
+  .apple-exp__right {
+    font-size: 0.85em;
+    line-height: 1.6;
   }
 
   .apple-cta {
-    padding: 2.5em 0 2em;
+    padding: 2em 0 1.5em;
   }
 
-  .apple-cta h2 {
-    font-size: 1.25em;
+  .apple-cta__headline {
+    font-size: 1.1em !important;
   }
 
   .apple-cta__buttons {
@@ -950,7 +969,21 @@ html[data-theme="dark"] {
   }
 
   .apple-section h2 {
-    font-size: 1.2em;
+    font-size: 1.1em;
+  }
+
+  .apple-tags {
+    gap: 0.4em;
+  }
+
+  .apple-tag {
+    font-size: 0.78em;
+    padding: 0.4em 0.75em;
+  }
+
+  .apple-footer-links a {
+    margin: 0 0.6em;
+    font-size: 0.8em;
   }
 }
 
