@@ -120,7 +120,7 @@ Robotics engineer with experience across real-time control, embedded systems, pe
       <li>Nonlinear MPC (ACADOS/CasADi) for autonomous racing at <strong>150+ mph, 100 Hz</strong></li>
       <li>Tire-model-aware control near the handling limits with explicit constraint satisfaction</li>
       <li>Full autonomy stack integration in ROS 2 and C++</li>
-      <li>Team won <strong>1st place</strong>, IAC passing competition at CES 2025</li>
+      <li>Deployed in competitive autonomous racing events (Indy Autonomous Challenge)</li>
     </ul>
   </div>
   <div class="experience-card">
@@ -189,7 +189,7 @@ See [Projects](/portfolio/) for detailed writeups and demos.
   <div class="experience-card">
     <div class="experience-card__header">
       <strong><a href="/portfolio/portfolio-1/">Autonomous Racing</a></strong>
-      <span class="experience-card__role">MPC at 100 Hz on Dallara AV-24 race cars</span>
+      <span class="experience-card__role">Nonlinear MPC at 100 Hz on Dallara AV-24</span>
     </div>
   </div>
   <div class="experience-card">

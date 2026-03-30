@@ -7,11 +7,11 @@ category_label: deployed
 priority: 1
 thumbnail: "/images/av24-race.jpg"
 status: deployed
-summary: "MPC controllers for the AV-24 at UC Berkeley ROAR. Tire-model-aware nonlinear optimization at 100 Hz, deployed on a real race car. CES 2025 winner."
+summary: "MPC controllers for the AV-24 at UC Berkeley ROAR. Tire-model-aware nonlinear optimization at 100 Hz, deployed on a real race car."
 highlights:
   - "100 Hz MPC solve time (< 10ms per cycle)"
   - "150+ mph, < 15cm lateral tracking error"
-  - "1st place at IAC CES 2025 passing competition"
+  - "Full ROS 2 autonomy stack in C++ and Python"
 tech:
   - C++
   - Python
@@ -24,10 +24,10 @@ tech:
 ---
 
 ![AV-24 at Las Vegas Motor Speedway](/images/av24-race.jpg)
-*AI Racing Tech AV-24 at Las Vegas Motor Speedway. CES 2025 passing competition -- we took 1st.*
+*AI Racing Tech AV-24 at Las Vegas Motor Speedway.*
 
 ![Team photo with AV-24](/images/av24-ces25-team.jpeg)
-*The team after CES 2025.*
+*AI Racing Tech team.*
 
 ## What this is
 
@@ -50,7 +50,7 @@ The core is a nonlinear MPC built on ACADOS and CasADi. It uses a Pacejka tire m
 - **150+ mph** autonomous driving, **< 15cm** lateral tracking error
 - MPC solves in **< 10ms** consistently (100 Hz)
 - Constraint satisfaction holds through aggressive cornering
-- 1st place at the Indy Autonomous Challenge passing competition, CES 2025
+- Deployed and tested in competitive autonomous racing events
 
 ---
 

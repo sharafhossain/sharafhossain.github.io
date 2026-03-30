@@ -10,7 +10,7 @@ redirect_from:
 
 <div class="apple-hero-grid">
   <div class="apple-hero-grid__main">
-    <img src="/images/av24-ces25-finish.jpg" alt="AV-24 race cars at CES 2025" />
+    <img src="/images/av24-ces25-finish.jpg" alt="AV-24 autonomous race cars" />
   </div>
   <div class="apple-hero-grid__side">
     <div class="apple-hero-grid__item">
@@ -23,8 +23,7 @@ redirect_from:
 </div>
 
 <div class="apple-headline">
-  <h1>I build autonomous systems<br/>that run on real hardware.</h1>
-  <p class="apple-sub">Racing at 150+ mph. Manipulation on real robot arms. Drone swarm simulation.<br/>UC Berkeley MEng. Previously HSBC, startup co-founder (UK MOD contract).</p>
+  <p class="apple-sub">Robotics & controls engineer. UC Berkeley MEng.<br/>Nonlinear optimization, perception systems, embedded control.<br/>Currently with AI Racing Tech on the Indy Autonomous Challenge.</p>
 </div>
 
 <div class="apple-stats">
@@ -37,17 +36,17 @@ redirect_from:
     <span class="apple-stat__label">control rate</span>
   </div>
   <div class="apple-stat">
-    <span class="apple-stat__number">1st</span>
-    <span class="apple-stat__label">CES 2025</span>
+    <span class="apple-stat__number">&lt;15cm</span>
+    <span class="apple-stat__label">tracking error</span>
   </div>
   <div class="apple-stat">
-    <span class="apple-stat__number">10K+</span>
-    <span class="apple-stat__label">datasets at HSBC</span>
+    <span class="apple-stat__number">5+</span>
+    <span class="apple-stat__label">hardware platforms</span>
   </div>
 </div>
 
 <div class="apple-section">
-  <h2>What I work with</h2>
+  <h2>Stack</h2>
   <div class="apple-tags">
     <span class="apple-tag">C++</span>
     <span class="apple-tag">Python</span>
@@ -80,17 +79,7 @@ redirect_from:
       <span>Robotics & Autonomy</span>
     </div>
     <div class="apple-exp__right">
-      MPC controllers for AI Racing Tech's AV-24. 100 Hz nonlinear optimization, tire-model-aware control, full ROS 2 stack. Won CES 2025.
-    </div>
-  </div>
-
-  <div class="apple-exp">
-    <div class="apple-exp__left">
-      <strong>Warehouse Manipulation</strong>
-      <span>Robotics Engineer</span>
-    </div>
-    <div class="apple-exp__right">
-      RGB-D perception through IK to joint-space MPC on a UR7e. Picks and places on real hardware in cluttered environments.
+      MPC controllers for AI Racing Tech's AV-24. Nonlinear optimization at 100 Hz, tire-model-aware control, full ROS 2 autonomy stack.
     </div>
   </div>
 
@@ -100,7 +89,7 @@ redirect_from:
       <span>ML Engineer</span>
     </div>
     <div class="apple-exp__right">
-      Satellite imagery + ML for infrastructure monitoring. Forecasting that found 14% energy savings across a GBP 30M+ portfolio.
+      Satellite imagery + ML for infrastructure monitoring. Forecasting models that found 14% energy savings across a GBP 30M+ portfolio.
     </div>
   </div>
 
@@ -110,7 +99,7 @@ redirect_from:
       <span>Data Engineer</span>
     </div>
     <div class="apple-exp__right">
-      ETL pipelines for 10,000+ unstructured datasets. Anomaly detection at >99% accuracy. NLP extraction for compliance.
+      ETL pipelines for 10,000+ unstructured datasets. Anomaly detection at >99% accuracy. NLP extraction for compliance docs.
     </div>
   </div>
 
@@ -120,14 +109,13 @@ redirect_from:
       <span>Co-founder</span>
     </div>
     <div class="apple-exp__right">
-      UCL-incubated startup. GBP 30K funding, GBP 10K+ revenue. Fire-resistant prototypes for the UK Ministry of Defence.
+      UCL-incubated startup. GBP 30K funding, GBP 10K+ revenue. Delivered prototypes for the UK Ministry of Defence.
     </div>
   </div>
 </div>
 
 <div class="apple-cta">
-  <h2>Looking for robotics & autonomy roles in the US.</h2>
-  <p>Controls. Simulation. ML. Drones. Manipulation. Available now.</p>
+  <p class="apple-cta__headline">Looking for robotics, autonomy, or ML engineering roles in the US.</p>
   <div class="apple-cta__buttons">
     <a href="mailto:sharaf_hossain@berkeley.edu" class="apple-btn apple-btn--primary">Get in touch</a>
     <a href="/files/Sharaf_Hossain_Resume.pdf" class="apple-btn apple-btn--ghost">Resume</a>

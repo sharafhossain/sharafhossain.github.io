@@ -702,24 +702,24 @@ html[data-theme="dark"] {
 /* ── Headline ── */
 .apple-headline {
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 2.5em;
 }
 
 .apple-headline h1 {
-  font-size: 2.2em;
+  font-size: 1.8em;
   font-weight: 700;
   letter-spacing: -0.03em;
-  line-height: 1.2;
+  line-height: 1.25;
   margin: 0 0 0.6em 0;
   padding: 0;
   border: none !important;
 }
 
 .apple-sub {
-  font-size: 1em;
+  font-size: 0.95em;
   line-height: 1.7;
-  opacity: 0.55;
-  max-width: 540px;
+  opacity: 0.5;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -825,19 +825,15 @@ html[data-theme="dark"] {
   padding: 4em 0 3em;
 }
 
-.apple-cta h2 {
-  font-size: 1.6em;
-  font-weight: 700;
+.apple-cta h2,
+.apple-cta__headline {
+  font-size: 1.3em;
+  font-weight: 600;
   letter-spacing: -0.02em;
-  margin: 0 0 0.4em 0;
+  margin: 0 0 1.2em 0;
   padding: 0;
   border: none !important;
-}
-
-.apple-cta > p {
-  font-size: 0.95em;
-  opacity: 0.45;
-  margin: 0 0 2em;
+  opacity: 0.85;
 }
 
 .apple-cta__buttons {
