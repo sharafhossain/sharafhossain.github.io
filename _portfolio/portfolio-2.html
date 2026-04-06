@@ -7,7 +7,7 @@ priority: 2
 thumbnail: "/images/final_robot_mpc.mp4"
 thumbnail_type: video
 status: deployed
-summary: "Full pipeline from RGB-D camera to MPC to robot arm. Picks and places in cluttered environments on a real UR7e -- not a sim demo."
+summary: "Full pipeline from RGB-D camera to MPC to robot arm. Picks and places in cluttered environments on a real UR7e."
 highlights:
   - "RGB-D detection → IK → MPC → hardware execution"
   - "Collision-free pick-and-place with sub-second replanning"
@@ -26,43 +26,31 @@ tech:
 
 <h2>What this is</h2>
 <p>
-A pick-and-place system on a UR7e arm. The camera sees the objects (RealSense RGB-D), inverse kinematics figures out where the joints need to go, and a joint-space MPC gets them there while respecting joint limits, velocity bounds, and collision margins. The whole loop runs online so the robot can react when things move.
-</p>
-<p>
-This runs on actual hardware in a cluttered environment. Not a simulation screenshot.
+Pick-and-place on a UR7e arm with a RealSense RGB-D camera, inverse kinematics, and a joint-space MPC that handles the motion. Camera sees objects, IK figures out joint targets, MPC gets there while respecting joint limits, velocity bounds, and collision margins. The whole loop runs online so the robot can react when things shift around.
 </p>
 
 <hr/>
 
 <h2>How it works</h2>
 
-<h3>Perception</h3>
-<ul>
-  <li>RGB-D object detection and 6-DOF pose estimation with RealSense</li>
-  <li>Targets update online as new objects come into view</li>
-  <li>Handles partial occlusion and noisy depth data</li>
-</ul>
+<p>
+The RealSense gives us RGB-D for object detection and 6-DOF pose estimation. Targets update live as new objects appear. Depth data is noisy and there's partial occlusion, so the perception has to be robust to that.
+</p>
 
-<h3>Control</h3>
-<ul>
-  <li>Joint-space MPC optimizes over a finite horizon each timestep</li>
-  <li>Hard constraints on joint positions, velocities, and collision clearance</li>
-  <li>If the target moves mid-trajectory, the controller replans without starting over</li>
-</ul>
+<p>
+On the control side, a joint-space MPC optimizes over a finite horizon each timestep with hard constraints on positions, velocities, and collision clearance. If the target moves mid-trajectory, the controller replans without restarting from scratch. Getting that replan to be fast enough was one of the trickier parts. Early versions would stutter when the target jumped.
+</p>
 
-<h3>Integration</h3>
-<ul>
-  <li>ROS 2 + MoveIt ties it together: camera feed &rarr; IK &rarr; MPC &rarr; motor commands</li>
-  <li>Each piece is modular and independently testable</li>
-  <li>Validated on the physical UR7e arm</li>
-</ul>
+<p>
+ROS 2 + MoveIt ties it all together: camera feed into IK into MPC into motor commands. Each piece is independently testable, which made debugging a lot less painful when things inevitably broke at integration time.
+</p>
 
 <hr/>
 
 <h2>Results</h2>
 <ul>
   <li>Collision-free pick-and-place in cluttered setups</li>
-  <li>Smooth trajectories that stay within all joint constraints</li>
+  <li>Smooth trajectories within all joint constraints</li>
   <li>Replans in under a second when targets shift</li>
 </ul>
 

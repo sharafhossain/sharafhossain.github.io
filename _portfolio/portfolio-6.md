@@ -21,17 +21,15 @@ tech:
 
 ## What this will be
 
-This summer I'm starting research on Vision-Language-Action models for humanoid control at UC Berkeley. The starting point is DreamControl (Kalaria et al., ICRA 2026), which trains a diffusion model on human motion data, generates whole-body trajectories, retargets them to a Unitree G1, and trains a closed-loop RL policy for deployment.
+This summer I'm starting research on Vision-Language-Action models for humanoid control at UC Berkeley. The starting point is DreamControl (Kalaria et al., ICRA 2026): train a diffusion model on human motion data, generate whole-body trajectories, retarget them to a Unitree G1, and train a closed-loop RL policy for real deployment.
 
-I'm currently going through the codebase and related literature to get up to speed.
+I'm currently reading through the codebase and working through related literature.
 
 ---
 
-## Direction
+## Why this direction
 
-The general approach: use a generative model (diffusion) as a motion prior, then train task-specific RL on top of it for actual deployment. It's a similar pattern to what I'm doing with MPC + RL for racing -- a learned planner on top, a constrained executor underneath.
-
-The new challenge is degrees of freedom. A car has a handful of control inputs. A humanoid has dozens of joints that need to coordinate for whole-body tasks.
+The general idea is using a generative model as a motion prior, then training task-specific RL on top for deployment. It's conceptually similar to what I'm doing with MPC + RL for racing: learned planner on top, constrained executor underneath. The new challenge is degrees of freedom. A car has a handful of control inputs. A humanoid has dozens of joints that all need to coordinate for whole-body tasks, and the contact dynamics are much less predictable.
 
 ---
 

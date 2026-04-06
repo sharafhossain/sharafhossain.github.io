@@ -31,21 +31,21 @@ tech:
 
 ## What this is
 
-I work on the control system for UC Berkeley ROAR's autonomous race car -- a Dallara AV-24 that races at 150+ mph with no human driver. At those speeds, with tires near saturation and 10ms between control decisions, you can't use simple PID or trajectory replay. The controller has to solve a constrained nonlinear optimization problem in real time, every cycle.
+I work on the control system for UC Berkeley ROAR's autonomous race car. It's a Dallara AV-24, and at 150+ mph with tires near saturation, you get about 10ms between control decisions before the next one needs to go out. PID doesn't cut it. Trajectory replay doesn't cut it. The controller has to solve a constrained nonlinear optimization every single cycle.
 
 ---
 
 ## The controller
 
-The core is a nonlinear MPC built on ACADOS and CasADi. It uses a Pacejka tire model so the optimizer knows where the grip limits are, and it plans over a receding horizon with constraints on tire forces, actuator limits, track boundaries, and stability margins. Solve time stays under 10ms, which gives us 100 Hz control.
+The core is a nonlinear MPC built on ACADOS and CasADi. It uses a Pacejka tire model so the optimizer actually knows where grip runs out, and plans over a receding horizon with constraints on tire forces, actuator limits, track boundaries, and stability margins. We keep solve time under 10ms, which gives us 100 Hz.
 
-**State estimation** runs EKF/UKF fusing IMU, GPS, wheel speeds, and steering angle. It has to handle sensor dropouts gracefully -- at racing speeds, a bad estimate means you're in the wall.
+State estimation runs EKF/UKF fusing IMU, GPS, wheel speeds, and steering angle. The hard part isn't the filter math, it's handling sensor dropouts gracefully. At racing speeds, one bad estimate and you're in the wall.
 
-**Systems integration** -- the controller sits in a ROS 2 stack alongside perception and planning. Control nodes are in C++, planning interfaces in Python. We validate in Isaac Sim before going to the real car.
+The whole thing sits in a ROS 2 stack alongside perception and planning. Control nodes are C++, planning interfaces are Python. We validate in Isaac Sim before anything touches the real car, which has saved us more than once.
 
 ---
 
-## Numbers
+## What actually matters
 
 - **150+ mph** autonomous driving, **< 15cm** lateral tracking error
 - MPC solves in **< 10ms** consistently (100 Hz)

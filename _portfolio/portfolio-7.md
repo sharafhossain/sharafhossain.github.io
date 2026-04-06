@@ -25,25 +25,25 @@ tech:
 
 ## What this is
 
-A simulation of multiple drones flying in coordinated swarms. Each drone has its own dynamics, and the swarm has to avoid collisions, maintain formations, and coordinate trajectories. I used machine learning to optimize the coordination parameters instead of hand-tuning everything.
+Simulation of coordinated drone swarms where each agent has its own dynamics and the swarm has to avoid collisions, hold formations, and coordinate trajectories. I used ML to optimize the coordination parameters because hand-tuning them was getting nowhere. Too many interacting gains and the landscape is non-convex enough that intuition breaks down past 4-5 agents.
 
 ---
 
-## Details
+## How it works
 
-**The simulation** models coupled drone dynamics -- each agent's behavior affects its neighbors. There's inter-agent collision avoidance, spacing constraints, and formation objectives.
+Each drone is modeled with coupled dynamics, meaning one agent's behavior directly affects its neighbors through aerodynamic interactions and spacing constraints. The simulation handles inter-agent collision avoidance and formation objectives.
 
-**The ML part** optimizes swarm trajectories and coordination parameters. Instead of manually tuning gains and waypoints, the optimizer learns configurations that perform better than what I could set by hand. It generalizes across different swarm sizes.
+The ML optimizer learns coordination parameters (gains, waypoint timing, spacing targets) that outperform what I could set manually. The interesting part was that it generalized across swarm sizes. Parameters trained on 6 drones transferred reasonably well to 12 without retraining, though the collision margins got tighter.
 
-**The infrastructure** is set up for parameterized experiments -- you can change swarm size, formation shape, task objectives and re-run.
+The whole thing is parameterized so you can swap formation shapes, swarm sizes, and task objectives without rewriting simulation code.
 
 ---
 
 ## Results
 
-- Collision-free swarm trajectories
-- ML-optimized coordination outperforms hand-tuned baselines
-- Works across different numbers of agents
+- Collision-free trajectories across all tested configurations
+- ML-optimized coordination consistently beat hand-tuned baselines, especially as swarm size grew
+- The gap between hand-tuned and learned parameters got wider with more agents, which makes sense since humans are bad at reasoning about high-dimensional coupled systems
 
 ---
 

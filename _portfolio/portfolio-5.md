@@ -20,17 +20,17 @@ tech:
 
 ## What this is
 
-Firmware for a PX4-based quadrotor at UC Berkeley. Real-time C++ on a microcontroller with limited memory and strict timing -- if the attitude loop misses a deadline, the drone falls out of the sky.
+Firmware for a PX4-based quadrotor. Real-time C++ on a microcontroller with limited memory and hard timing constraints. If the attitude loop misses a deadline, the drone falls.
 
 ---
 
 ## What I did
 
-Wrote the embedded C++ firmware for flight control: motor mixing, attitude stabilization, the low-level stuff. Integrated IMU and gyroscope readings for onboard state estimation.
+Wrote the motor mixing and attitude stabilization firmware. Fused IMU and gyroscope readings for onboard state estimation.
 
-A lot of the work was debugging. Sensor drift from vibration, communication dropouts between the flight controller and peripherals, control gains that worked on the bench but not in the air. You figure these out by staring at raw telemetry logs, not by running another simulation.
+Most of the actual work was debugging, not writing new code. Sensor drift from vibration was the worst. The IMU would slowly convince the controller the drone was level when it wasn't. Communication dropouts between the flight controller and peripherals would show up randomly under load. Control gains that worked perfectly on the bench would oscillate in the air because the bench doesn't have prop wash. You diagnose these by staring at raw telemetry, not by running another simulation.
 
-Tuned control parameters through iterative flight testing. The quad had to handle wind gusts and battery voltage drops without losing stability.
+Tuned control parameters through flight testing. The quad had to handle wind gusts and battery voltage drops mid-flight without losing stability, which meant the gains couldn't be too aggressive.
 
 ---
 

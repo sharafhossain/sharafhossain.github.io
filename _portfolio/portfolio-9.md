@@ -20,9 +20,9 @@ tech:
 
 ## What this is
 
-Simulating satellite swarms in orbit -- the dynamics of many bodies under gravity, how to maintain constellation formations, how to avoid collisions, and how to optimize coverage geometry. Different problem domain from drones but a lot of the same multi-agent coordination challenges.
+Simulating satellite swarms in orbit. Many bodies under gravity, maintaining constellation formations, avoiding collisions, and optimizing coverage geometry. A lot of the multi-agent coordination patterns from the drone swarm work carry over, but the dynamics are completely different. Orbital mechanics doesn't forgive the same way atmosphere does. There's no drag to slow you down if you overshoot, and maneuvers cost fuel you can't get back.
 
-In progress.
+Currently building out the orbital dynamics and formation-keeping logic.
 
 ---
 

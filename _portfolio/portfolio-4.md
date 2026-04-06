@@ -22,17 +22,17 @@ tech:
   - MAPPO
 ---
 
-## The idea
+## The problem
 
-Racing against a single clock is one problem. Racing against other cars that are also trying to win is a different, harder problem. Your optimal trajectory now depends on what the other cars do -- and they're thinking the same thing about you.
-
-I'm extending my single-car MPC work to handle this. The approach is a hybrid: RL picks the strategy (overtake left, defend inside, wait and draft), and MPC executes it while keeping the car within its physical limits. MPC alone can't reason about strategy; RL alone can't guarantee you won't spin out at 150 mph. You need both.
-
-**This is in progress.** The single-car MPC is done and deployed (see the racing project). Right now I'm building the multi-agent simulation environment and integrating the two layers.
+Racing against a clock is one thing. Racing against other cars that are also trying to win is a fundamentally different problem. Your optimal trajectory depends on what the other cars do, and they're reasoning about you the same way. The single-car MPC I built doesn't account for any of that.
 
 ---
 
-## Architecture
+## The approach
+
+Hybrid architecture: RL picks the strategy (overtake left, defend inside, wait and draft), MPC executes it within the car's physical limits.
+
+Why not just one or the other? MPC can't encode "wait two laps then take the outside line." That's a strategic decision, not something you can express as a cost function. And RL by itself can't guarantee constraint satisfaction at 150+ mph with 10ms control loops. You need both layers.
 
 ```
 Opponent observation → Strategic policy (MARL)
@@ -42,25 +42,13 @@ Opponent observation → Strategic policy (MARL)
                     Vehicle dynamics
 ```
 
-**MPC layer** -- each car solves its own nonlinear MPC, but with predictions of where the other cars will be. Collision avoidance between vehicles shows up as coupled constraints.
-
-**Strategy layer** -- trained with MAPPO in simulation. The policy outputs discrete decisions (overtake, defend, follow) and a reference trajectory for the MPC to track. Centralized training, decentralized execution.
-
-**The key constraint** -- the RL policy can suggest whatever it wants, but the MPC won't execute anything that violates the dynamics. It's a safety filter. Learned policies propose, physics-aware optimization disposes.
+Each car solves its own nonlinear MPC, but with predictions of where opponents will be. Collision avoidance between vehicles shows up as coupled constraints. The strategy layer is trained with MAPPO in simulation: centralized training, decentralized execution. Critically, the RL policy can suggest whatever it wants, but the MPC won't execute anything that violates the dynamics. It acts as a safety filter.
 
 ---
 
-## Why not just use one or the other?
+## Current status
 
-- MPC by itself can't encode "wait two laps then overtake on the outside" -- that's strategic, not optimization-shaped
-- RL by itself can't guarantee constraint satisfaction at 150+ mph with 10ms control loops
-- The hybrid gets you both: strategic intelligence with hard safety guarantees
-
----
-
-## Where it stands
-
-- Single-agent MPC: **done**
+- Single-agent MPC: **done** (see the racing project)
 - Multi-agent sim environment: **building now**
 - Hybrid integration: **next**
 
